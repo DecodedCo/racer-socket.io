@@ -1,0 +1,19 @@
+{
+  "name": "racer-socket.io",
+  "version": "0.0.0",
+  "description": "A racer transport based on socket.io.",
+  "main": "lib/server.js",
+  "browser": {
+    "main": "lib/browser.js"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Joe Dytrych",
+  "license": "MIT",
+  "dependencies": {
+    "socket.io": "^1.0.6",
+    "socket.io-client": "^1.0.6",
+    "through": "^2.3.4"
+  }
+}
