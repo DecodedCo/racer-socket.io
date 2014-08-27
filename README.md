@@ -5,18 +5,18 @@ where possible.
 
 ## Usage
 `racer-socket.io` needs your racer store, as well as your express
-[cookieParser](cookie-parser) and sessionStore (e.g.
-[connect-redis](connect-redis)) in order to fetch your user's sessions:
+[cookieParser](cookie-parser) and [session](session) middlewares in
+order to fetch your user's sessions:
 
 ```javascript
 var racerSocketIo = require('racer-socket.io'),
   store = racer.createStore(),
-  cookieParser = ...,
-  sessionStore = ...;
+  cookieParser = require('cookie-parser')(...),
+  session = require('express-session')(...);
 
 var attach = racerSocketIo(store, {
   cookieParser: cookieParser,
-  sessionStore: sessionStore
+  session: session
 });
 ```
 
@@ -28,7 +28,7 @@ attach(server);
 ```
 
 [cookie-parser]: https://github.com/expressjs/cookie-parser
-[connect-redis]: https://github.com/visionmedia/connect-redis
+[session]: https://github.com/expressjs/session
 
 ## License
 The MIT License (MIT)
