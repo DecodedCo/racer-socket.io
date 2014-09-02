@@ -20,6 +20,20 @@ var attach = racerSocketIo(store, {
 });
 ```
 
+You can optionally pass a Redis host and port if you want to use the 
+[socket.io-redis](http://github.com/Automattic/socket.io-redis) adapter 
+(defaults to `localhost:6379`):
+
+```javascript
+var attach = racerSocketIo(store, {
+  // ...
+  redisStore: {
+    host: 'redis.myapp.io',
+    port: 1337
+  }
+}
+```
+
 Use the returned `attach` function to attach socket.io to your server:
 
 ```javascript
