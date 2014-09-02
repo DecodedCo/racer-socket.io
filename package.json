@@ -1,6 +1,6 @@
 {
   "name": "racer-socket.io",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A racer transport based on socket.io.",
   "main": "lib/server.js",
   "browser": {
